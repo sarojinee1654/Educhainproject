@@ -1,4 +1,22 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}
+Issue Certificate
+{% endblock title %}
+
+{% block body %}
+<center>
+    <h1>Issue Certificate</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Issue</button>
+</form>
+</center>
+{% endblock body %}
+
+
+
+<!-- {% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,4 +30,4 @@
         <button type="submit">Issue</button>
     </form>
 </body>
-</html>
+</html> {% endcomment %} -->

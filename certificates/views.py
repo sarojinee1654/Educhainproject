@@ -6,7 +6,10 @@ from django.contrib import messages
 
 
 
-@login_required
+def home(request):
+    return render(request,'home.html')
+
+# @login_required
 def issue_certificate(request):
     if request.method == 'POST':
         form = CertificateForm(request.POST)
